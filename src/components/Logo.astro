@@ -1,0 +1,20 @@
+---
+interface Props {
+	dir: string;
+}
+
+const { dir } = Astro.props;
+---
+
+<div>
+    <img src={dir} alt="">
+</div>
+
+<style>
+    div{
+        width: 35%;
+    }
+    img{
+        border-radius: 10px;
+    }
+</style>
