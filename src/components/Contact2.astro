@@ -2,6 +2,11 @@
 
 ---
 
+<div class="titulo">
+    <p>
+        Conoce más acerca de nuestras sucursales:
+    </p>
+</div>
 <section id="contacto">
     <div class="column" id="cerrito">
         <a
@@ -10,11 +15,15 @@
             rel="noopener noreferrer"
         >
             <div class="info">
-                <p>Direccion: <br>Av. Gral. Flores 4264.</p>
-                <p>Telefono: <br>2215 2620</p>
-                <p>Horarios: <br>L a V de 8.15 a 13.00 y de 14.00 a 18.00 <br>Sábados de 8.15 a 14.00</p>
+                <p><b>Dirección:</b> <br />Av. Gral. Flores 4264.</p>
+                <p><b>Teléfono:</b> <br />2215 2620</p>
+                <p>
+                    <b>Horarios:</b> 
+                    <br />L a V de 8.15 a 13.00 y de 14.00 a 18.00 
+                    <br />Sábados de 8.15 a 14.00
+                </p>
             </div>
-            <img src="src/img/cerrito_map.png" alt="" />
+            <img src="src/img/cerrito_map2.png" alt="" />
         </a>
     </div>
     <div class="column" id="union">
@@ -24,11 +33,11 @@
             rel="noopener noreferrer"
         >
             <div class="info">
-                <p>Direccion: tanto</p>
-                <p>Telefono: 9000000</p>
-                <p>Horarios</p>
+                <p><b>Dirección:</b> <br />Bv. José Batlle y Ordóñez 2654</p>
+                <p><b>Teléfono:</b> <br />2508 3829</p>
+                <p><b>Horarios:</b> <br />L a V de 8.15 a 13.00 y de 14.00 a 18.00</p>
             </div>
-            <img src="src/img/union_map.png" alt="" />
+            <img src="src/img/union_map2.png" alt="" />
         </a>
     </div>
 </section>
@@ -36,8 +45,9 @@
 <style>
     a {
         width: 80%;
-        margin-top: -200px;
         border-radius: 20px;
+        position: relative;
+        box-shadow: 5px 5px 4px var(--color9);
     }
     img {
         width: 100%;
@@ -45,21 +55,22 @@
         border-radius: 20px;
     }
     .info {
-        width: 50%;
-        height: 200px;
-        position: relative;
-        top: 300px;
-        left: 150px;
+        width: 40%;
+        height: 220px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
         z-index: 100;
         background-color: var(--color13);
-        /* background-image: src/img/cerrito_logo_2.png; */
         border-radius: 20px;
-        padding: 15px;
+        border-width: 6px;
+        border-color: var(--color11);
+        box-sizing: border-box;
+        padding: 10px;
+        box-shadow: 3px 3px 3px var(--color9);
     }
-
     .info p {
-        font-size: small;
-
+        font-size: 14px;
     }
     #contacto {
         width: 100%;
@@ -68,6 +79,7 @@
         justify-content: space-evenly;
         align-items: center;
         margin: auto;
+        margin-top: 25px;
     }
     .column {
         display: flex;
@@ -75,9 +87,20 @@
         justify-content: center;
         align-items: center;
     }
-
-    p {
-        font-size: small;
-
+    .titulo {
+        padding-top: 5%;
+    } 
+    .titulo p{
+        font-size: 20px;
+        font-weight: bold;
+        width: 30%;
+        text-align: center;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 0;
+        background-color: var(--color13);
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 5px 5px 4px var(--color9);
     }
 </style>
