@@ -11,29 +11,38 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
+		<script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
 	</body>
 </html>
 <style is:global>
 	:root {
 		--color1: #c92432;
-		--color2: #2a3a8d;
+		--color2: #2a3b8d;
 		--color3: #00005b;
 		--color4: #00008e;
 		--color5: #e6d542;
 		--color6: #b21a2f;
-		--color7: #ffffff;
+		--color7: #ffffff99;
 		--color8: #383332;
 		--color9: #30383a;
 		--color10: #475356;
 		--color11: #5e6e72;
 		--color12: #75898e;
-		--color13: #fdfefe;
+		--color13: #ffffffcc;
+		--color14: #fdfefe;
+	}
+	@font-face {
+		font-family: 'Montserrat';
+		src: url('src/fonts/Montserrat-VariableFont_wght.ttf');
+	}
+	p{
+		font-family: 'Montserrat';
 	}
 </style>

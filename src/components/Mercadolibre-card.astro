@@ -1,0 +1,37 @@
+---
+interface Props {
+    img: string;
+    description: string;
+    price: string;
+    link: string;
+}
+
+const { img, description, price, link } = Astro.props;
+---
+
+<div class="card">
+    <a href={link} target="_blank">
+        <img src={img} alt="" />
+        <p class="description">{description}</p>
+        <p class="price">${price}</p>
+    </a>
+</div>
+
+<style>
+    .card{
+        margin-top: 10px;
+        border-radius: 1rem;
+        background-color: var(--color14);
+        max-height: 320px;
+    }
+    img{
+        border-radius: 1rem 1rem 0 0;
+    }
+    .description{
+        margin: 10px 10px 0 10px;
+    }
+    .price{
+        margin: 0 10px 10px 10px;
+        font-size: 25px;
+    }
+</style>
