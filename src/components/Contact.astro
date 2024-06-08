@@ -3,52 +3,42 @@
 ---
 
 <div class="titulo">
-    <p>
-        Conoce más acerca de nuestras sucursales:
-    </p>
+    <p>Nuestras sucursales:</p>
 </div>
 <section id="contacto">
     <div class="column" id="cerrito">
-        <div class="info">
-            <p>Direccion: tanto</p>
-            <p>Telefono: 9000000</p>
-            <p>Horarios</p>
+        <h2>Cerrito</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13095.544762508836!2d-56.1619818!3d-34.8590869!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a02bbaf7e36fd7%3A0x30a33c769a7f1a63!2sTornilleria%20Cerrito!5e0!3m2!1ses-419!2suy!4v1717852508448!5m2!1ses-419!2suy"
+            width="600"
+            height="600"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="horarios">
+            <p><b>Teléfono:</b> <br />2215 2620</p>
+            <p>
+                <b>Horario:</b>
+                <br />L a V de 8.15 a 13.00 y de 14.00 a 18.00
+                <br />Sábados de 8.15 a 14.00
+            </p>
         </div>
-        <a
-            href="https://www.google.com/maps/place/Tornilleria+Cerrito/@-34.8590869,-56.1619818,15.54z/data=!4m6!3m5!1s0x95a02bbaf7e36fd7:0x30a33c769a7f1a63!8m2!3d-34.8525169!4d-56.1600518!16s%2Fg%2F11g07cyx52?authuser=0&entry=ttu"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <div class="info">
-                <p><b>Dirección:</b> <br />Av. Gral. Flores 4264.</p>
-                <p><b>Teléfono:</b> <br />2215 2620</p>
-                <p>
-                    <b>Horarios:</b> 
-                    <br />L a V de 8.15 a 13.00 y de 14.00 a 18.00 
-                    <br />Sábados de 8.15 a 14.00
-                </p>
-            </div>
-            <img src="src/img/cerrito_map2.png" alt="" />
-        </a>
     </div>
     <div class="column" id="union">
-        <div class="info">
-            <p>Direccion: tanto</p>
-            <p>Telefono: 9000000</p>
-            <p>Horarios</p>
+        <h2>Unión</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13091.586561515409!2d-56.1457948!3d-34.8839417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80e5853d30d7%3A0x32627e695dadb487!2zVG9ybmlsbGVyw61hIFVuacOzbg!5e0!3m2!1ses-419!2suy!4v1717852570349!5m2!1ses-419!2suy"
+            width="600"
+            height="600"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="horarios">
+            <p><b>Teléfono:</b> <br/> 2508 3829</p>
+            <p><b>Horario:</b> <br/> L a V de 8.15 a 13.00 y de 14.00 a 18.00</p>
         </div>
-        <a
-            href="https://www.google.com/maps/place/Torniller%C3%ADa+Uni%C3%B3n/@-34.8839417,-56.1457948,15.25z/data=!4m6!3m5!1s0x959f80e5853d30d7:0x32627e695dadb487!8m2!3d-34.8817275!4d-56.1442421!16s%2Fg%2F11hczgfsqv?authuser=0&entry=ttu"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <div class="info">
-                <p><b>Dirección:</b> <br />Bv. José Batlle y Ordóñez 2654</p>
-                <p><b>Teléfono:</b> <br />2508 3829</p>
-                <p><b>Horarios:</b> <br />L a V de 8.15 a 13.00 y de 14.00 a 18.00</p>
-            </div>
-            <img src="src/img/union_map2.png" alt="" />
-        </a>
     </div>
 </section>
 
@@ -96,12 +86,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 10px;
+        box-sizing: content-box;
+        border-radius: 20px;
+        background-color: white;
     }
     .titulo {
         padding-top: 5%;
         padding-bottom: 3%;
-    } 
-    .titulo p{
+    }
+    .titulo p {
         font-size: 20px;
         font-weight: bold;
         width: 30%;
@@ -113,5 +107,20 @@
         border-radius: 10px;
         padding: 10px;
         box-shadow: 5px 5px 4px var(--color9);
+    }
+    h2 {
+        font-size: 25px;
+    }
+    .horarios {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-evenly;
+    }
+    .horarios p {
+        width: 100%;
+        text-align: left;
     }
 </style>
