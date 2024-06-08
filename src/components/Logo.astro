@@ -1,24 +1,29 @@
 ---
 interface Props {
-	dir: string;
+    dir: string;
 }
 
 const { dir } = Astro.props;
 ---
 
 <div>
-    <img src={dir} alt="">
+    <img src={dir} alt="" />
 </div>
 
 <style>
-    div{
+    div {
         width: 45%;
         padding-top: 5%;
     }
-    img{
+    img {
         border-radius: 5px;
         border-style: solid;
         border-color: black;
         padding: 5px;
+    }
+    @media (max-width: 800px) {
+        div {
+            width: 75%;
+        }
     }
 </style>

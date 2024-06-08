@@ -15,24 +15,20 @@ import MercadolibreCard from "./Mercadolibre-card.astro"
                 <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
                 <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
             </div>
-            <!-- Item 2 -->
+            <!-- Item 2 
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
                 <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
                 <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
-                <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
-                <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
-            </div>
-            <!-- Item 3 -->
+            </div>-->
+            <!-- Item 3 
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
                 <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
                 <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
-                <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
-                <MercadolibreCard img="src/img/ml-slider.jpg" description="Artículo" price="99" link=""></MercadolibreCard>
-            </div>
+            </div>-->
         </div>
-        <!-- Slider indicators -->
+        <!-- Slider indicators 
         <div
             class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
         >
@@ -54,7 +50,7 @@ import MercadolibreCard from "./Mercadolibre-card.astro"
                 aria-current="false"
                 aria-label="Slide 3"
                 data-carousel-slide-to="2"></button>
-        </div>
+        </div>-->
         <!-- Slider controls -->
         <button
             type="button"
@@ -108,7 +104,13 @@ import MercadolibreCard from "./Mercadolibre-card.astro"
         </button>
     </div>
 </section>
-
+<script is:inline>
+    const slide = document.querySelector('#items>div')
+    if (screen.width<1400){
+        alert('llega hasta aca')
+        slide?.child
+    }
+</script>
 <style>
     #ml{
         display: flex;
@@ -118,8 +120,10 @@ import MercadolibreCard from "./Mercadolibre-card.astro"
     #items>div{
         background-color: var(--color13);
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-evenly;
+        gap: 20px;
     }
     #default-carousel{
         border-radius: 1rem;
