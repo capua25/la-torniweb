@@ -1,47 +1,76 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Logo from '../components/Logo.astro';
-import Lema from '../components/Lema.astro';
-import Footer from '../components/Footer.astro';
-import Contact from '../components/Contact.astro';
-import Mercadolibre from '../components/Mercadolibre.astro';
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/Logo.astro";
+import Lema from "../components/Lema.astro";
+import Footer from "../components/Footer.astro";
+import Contact from "../components/Contact.astro";
+import Mercadolibre from "../components/Mercadolibre.astro";
 ---
 
 <Layout title="Tornillerias.">
 	<main>
 		<div id="landing">
 			<div class="logo_container">
-				<Logo dir="/src/img/cerrito_logo0_blanco.png"></Logo>
-				<Logo dir="/src/img/union_logo_3_borderless.png"></Logo>
+				<Logo dir="/src/img/cerrito_logo0_blanco.png" />
+				<Logo dir="/src/img/union_logo_3_borderless.png" />
 			</div>
-			<Lema></Lema>
+			<Lema />
+			<button id="scrolldown"
+				>&darr; Conoce más acerca de nosotros &darr;</button
+			>
 		</div>
-		<Mercadolibre></Mercadolibre>
-		<Contact></Contact>
+		<span id="scroll"></span>
+		<Mercadolibre />
+		<Contact />
 	</main>
-	<Footer></Footer>
+	<Footer />
+
+	<script>
+		const arrow = document.getElementById("scrolldown");
+		const target = document.getElementById("scroll");
+		arrow?.addEventListener("click", () => {
+			arrow?.classList.add("hide");
+			target?.scrollIntoView({ behavior: "smooth" });
+		});
+		window.onscroll = () => {
+			if (window.scrollY > 10) {
+				arrow?.classList.add("hide");
+			} else {
+				arrow?.classList.remove("hide");
+			}
+		};
+	</script>
 </Layout>
 
 <style>
-	body{
-		background-color: var(--paleta2-2)/*var(--color2)*/;
+	body {
+		background-color: var(--paleta2-2) /*var(--color2)*/;
 	}
-	.logo_container{
+	.logo_container {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
 		align-items: center;
 	}
-	@media (max-width:800px) {
-		.logo_container{
+	@media (max-width: 800px) {
+		.logo_container {
 			flex-direction: column;
 		}
 	}
-	#landing{
+	#landing {
 		height: 100svh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+	#scrolldown {
+		color: whitesmoke;
+		font-size: 1rem;
+		position: absolute;
+		bottom: 10px;
+	}
+	.hide {
+		display: none;
 	}
 </style>
