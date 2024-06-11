@@ -104,11 +104,6 @@ import MercadolibreCard from "./Mercadolibre-card.astro"
         </button>
     </div>
 </section>
-<script is:inline>
-    const slide = document.querySelector('#items>div')
-    if (screen.width<1400){
-    }
-</script>
 <style>
     #ml{
         display: flex;
@@ -118,10 +113,11 @@ import MercadolibreCard from "./Mercadolibre-card.astro"
     #items>div{
         background-color: var(--color13);
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         flex-direction: row;
         justify-content: space-evenly;
-        gap: 20px;
+        gap: 15px;
+        padding: 0 15px 0 15px;
     }
     #default-carousel{
         border-radius: 1rem;
