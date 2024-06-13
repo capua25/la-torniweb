@@ -1,8 +1,12 @@
 ---
+import type { ImageMetadata } from 'astro';
 interface Props {
     dir: string;
 }
 const { dir } = Astro.props;
+// const images = import.meta.glob<{ default: ImageMetadata }>('src/img/*.{jpeg,jpg,png,gif}');
+// if (!images[dir]) throw new Error(`"${dir}" does not exist in glob: "src/img/*.{jpeg,jpg,png,gif}"`);
+// let imagen = await images[dir]();
 ---
 
 <div>

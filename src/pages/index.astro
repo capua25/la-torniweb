@@ -5,14 +5,17 @@ import Lema from "../components/Lema.astro";
 import Footer from "../components/Footer.astro";
 import Contact from "../components/Contact.astro";
 import Mercadolibre from "../components/Mercadolibre.astro";
+
+import logo1 from './src/img/cerrito_logo0_blanco.png';
+import logo2 from './src/img/union_logo_3_borderless.png';
 ---
 
 <Layout title="Bienvenido!">
 	<main>
 		<div id="landing">
 			<div class="logo_container">
-				<Logo dir="../src/img/cerrito_logo0_blanco.png" />
-				<Logo dir="../src/img/union_logo_3_borderless.png" />
+				<Logo dir={logo1.src} />
+				<Logo dir={logo2.src} />
 			</div>
 			<Lema />
 			<button id="scrolldown">&darr; Conoce más acerca de nosotros &darr;</button>
