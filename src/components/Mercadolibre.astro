@@ -1,6 +1,6 @@
 ---
-import MercadolibreCard from "./Mercadolibre-card.astro"
-import defaultImage from '../img/ml-slider.jpg';
+import MercadolibreCard from "./Mercadolibre-card.astro";
+import defaultImage from "../img/ml-slider.jpg";
 ---
 
 <section id="ml">
@@ -9,14 +9,72 @@ import defaultImage from '../img/ml-slider.jpg';
     </div>
     <div id="default-carousel" class="relative w-11/12" data-carousel="static">
         <!-- Carousel wrapper -->
-        <div id="items" class="relative h-56 overflow-hidden rounded-2xl md:h-96">
+        <div
+            id="items"
+            class="relative h-56 overflow-hidden rounded-2xl md:h-96"
+        >
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <MercadolibreCard img={defaultImage.src} description="Artículo" price="99" link=""></MercadolibreCard>
-                <MercadolibreCard img={defaultImage.src} description="Artículo" price="99" link=""></MercadolibreCard>
-                <MercadolibreCard img={defaultImage.src} description="Artículo" price="99" link=""></MercadolibreCard>
-                <MercadolibreCard img={defaultImage.src} description="Artículo" price="99" link=""></MercadolibreCard>
-                <MercadolibreCard img={defaultImage.src} description="Artículo" price="99" link=""></MercadolibreCard>
+                <MercadolibreCard
+                    img={defaultImage.src}
+                    description="Artículo"
+                    price="99"
+                    link=""
+                />
+                <MercadolibreCard
+                    img={defaultImage.src}
+                    description="Artículo"
+                    price="99"
+                    link=""
+                />
+                <MercadolibreCard
+                    img={defaultImage.src}
+                    description="Artículo"
+                    price="99"
+                    link=""
+                />
+                <MercadolibreCard
+                    img={defaultImage.src}
+                    description="Artículo"
+                    price="99"
+                    link=""
+                />
+                <MercadolibreCard
+                    img={defaultImage.src}
+                    description="Artículo"
+                    price="99"
+                    link=""
+                />
+                <MercadolibreCard
+                    img={defaultImage.src}
+                    description="Artículo"
+                    price="99"
+                    link=""
+                />
+                <MercadolibreCard
+                    img={defaultImage.src}
+                    description="Artículo"
+                    price="99"
+                    link=""
+                />
+                <MercadolibreCard
+                    img={defaultImage.src}
+                    description="Artículo"
+                    price="99"
+                    link=""
+                />
+                <MercadolibreCard
+                    img={defaultImage.src}
+                    description="Artículo"
+                    price="99"
+                    link=""
+                />
+                <MercadolibreCard
+                    img={defaultImage.src}
+                    description="Artículo"
+                    price="99"
+                    link=""
+                />
             </div>
             <!-- Item 2 
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -108,28 +166,95 @@ import defaultImage from '../img/ml-slider.jpg';
     </div>
 </section>
 <script is:inline>
-    const carousel = document.getElementById("items")
-    const slides = document.querySelector("[data-carousel-item]")
-    const articulos = document.querySelectorAll("[data-carousel-item] .card")
-    const cant_items = articulos.length
-    const card_width = 220
-    function resizeML(width){
-        if(width<card_width*6){
-            console.log(width)
+    const carousel = document.getElementById("items");
+    const slides = document.querySelector("[data-carousel-item]");
+    const articulos = document.querySelectorAll("[data-carousel-item] .card");
+    const cant_items = articulos.length;
+    const card_width = 220;
+    function resizeML(width) {
+        let items = 0;
+        carousel.innerHTML = "";
+        if (width < card_width * 2) {
+            for (let contador = 0; contador < cant_items; contador++) {
+                const nuevoslide = slides.cloneNode(false);
+                nuevoslide.appendChild(articulos[items]);
+                carousel.appendChild(nuevoslide);
+                items++;
+            }
+        } else {
+            if (width < card_width * 3) {
+                for (let contador = 0; contador < cant_items; contador++) {
+                    const nuevoslide = slides.cloneNode(false);
+                    for (let contador2 = 0; contador2 < 2; contador2++) {
+                        nuevoslide.appendChild(articulos[items]);
+                        carousel.appendChild(nuevoslide);
+                        items++;
+                    }
+                }
+            } else {
+                if (width < card_width * 4) {
+                    for (let contador = 0; contador < cant_items; contador++) {
+                        const nuevoslide = slides.cloneNode(false);
+                        for (let contador2 = 0; contador2 < 3; contador2++) {
+                            nuevoslide.appendChild(articulos[items]);
+                            carousel.appendChild(nuevoslide);
+                            items++;
+                        }
+                    }
+                } else {
+                    if (width < card_width * 5) {
+                        for (
+                            let contador = 0;
+                            contador < cant_items;
+                            contador++
+                        ) {
+                            const nuevoslide = slides.cloneNode(false);
+                            for (
+                                let contador2 = 0;
+                                contador2 < 4;
+                                contador2++
+                            ) {
+                                nuevoslide.appendChild(articulos[items]);
+                                carousel.appendChild(nuevoslide);
+                                items++;
+                            }
+                        }
+                    } else {
+                        for (
+                            let contador = 0;
+                            contador < cant_items;
+                            contador++
+                        ) {
+                            const nuevoslide = slides.cloneNode(false);
+                            for (
+                                let contador2 = 0;
+                                contador2 < 5;
+                                contador2++
+                            ) {
+                                nuevoslide.appendChild(articulos[items]);
+                                carousel.appendChild(nuevoslide);
+                                items++;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-    resizeML(window.innerWidth)
-    //window.onresize = resizeML(window.innerWidth)
-    //window.addEventListener("resize", resizeML(window.innerWidth))
+    resizeML(window.innerWidth);
+    window.onresize = resizeML(window.innerWidth);
 </script>
 <style>
-    #ml{
+    #ml {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    #items>div{
+    #items {
+        min-height: 350px;
         background-color: var(--color13);
+    }
+    #items > div {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
@@ -137,9 +262,10 @@ import defaultImage from '../img/ml-slider.jpg';
         gap: 15px;
         padding: 0 15px 0 15px;
     }
-    #default-carousel{
+    #default-carousel {
         border-radius: 1rem;
         box-shadow: 5px 5px 5px var(--color9);
+        min-height: 350px;
     }
     .titulo {
         width: 100%;
