@@ -186,9 +186,11 @@ import defaultImage from "../img/ml-slider.jpg";
                 for (let contador = 0; contador < cant_items; contador++) {
                     const nuevoslide = slides.cloneNode(false);
                     for (let contador2 = 0; contador2 < 2; contador2++) {
-                        nuevoslide.appendChild(articulos[items]);
-                        carousel.appendChild(nuevoslide);
-                        items++;
+                        if (articulos[items] != undefined) {
+                            nuevoslide.appendChild(articulos[items]);
+                            carousel.appendChild(nuevoslide);
+                            items++;
+                        }
                     }
                 }
             } else {
@@ -196,9 +198,11 @@ import defaultImage from "../img/ml-slider.jpg";
                     for (let contador = 0; contador < cant_items; contador++) {
                         const nuevoslide = slides.cloneNode(false);
                         for (let contador2 = 0; contador2 < 3; contador2++) {
-                            nuevoslide.appendChild(articulos[items]);
-                            carousel.appendChild(nuevoslide);
-                            items++;
+                            if (articulos[items] != undefined) {
+                                nuevoslide.appendChild(articulos[items]);
+                                carousel.appendChild(nuevoslide);
+                                items++;
+                            }
                         }
                     }
                 } else {
@@ -214,9 +218,11 @@ import defaultImage from "../img/ml-slider.jpg";
                                 contador2 < 4;
                                 contador2++
                             ) {
-                                nuevoslide.appendChild(articulos[items]);
-                                carousel.appendChild(nuevoslide);
-                                items++;
+                                if (articulos[items] != undefined) {
+                                    nuevoslide.appendChild(articulos[items]);
+                                    carousel.appendChild(nuevoslide);
+                                    items++;
+                                }
                             }
                         }
                     } else {
@@ -231,9 +237,11 @@ import defaultImage from "../img/ml-slider.jpg";
                                 contador2 < 5;
                                 contador2++
                             ) {
-                                nuevoslide.appendChild(articulos[items]);
-                                carousel.appendChild(nuevoslide);
-                                items++;
+                                if (articulos[items] != undefined) {
+                                    nuevoslide.appendChild(articulos[items]);
+                                    carousel.appendChild(nuevoslide);
+                                    items++;
+                                }
                             }
                         }
                     }
