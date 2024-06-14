@@ -4,12 +4,14 @@ import defaultImage from '../img/ml-slider.jpg';
 ---
 
 <section id="ml">
+    <div class="titulo">
+        <h2>Nuestros artículos</h2>
+    </div>
     <div id="default-carousel" class="relative w-11/12" data-carousel="static">
         <!-- Carousel wrapper -->
         <div id="items" class="relative h-56 overflow-hidden rounded-2xl md:h-96">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <!-- ACÁ VAN 5 O 6 PUBLICACIONES DE ML (POR CADA ITEM DEL CARROUSEL) -->
                 <MercadolibreCard img={defaultImage.src} description="Artículo" price="99" link=""></MercadolibreCard>
                 <MercadolibreCard img={defaultImage.src} description="Artículo" price="99" link=""></MercadolibreCard>
                 <MercadolibreCard img={defaultImage.src} description="Artículo" price="99" link=""></MercadolibreCard>
@@ -105,6 +107,21 @@ import defaultImage from '../img/ml-slider.jpg';
         </button>
     </div>
 </section>
+<script is:inline>
+    const carousel = document.getElementById("items")
+    const slides = document.querySelector("[data-carousel-item]")
+    const articulos = document.querySelectorAll("[data-carousel-item] .card")
+    const cant_items = articulos.length
+    const card_width = 220
+    function resizeML(width){
+        if(width<card_width*6){
+            console.log(width)
+        }
+    }
+    resizeML(window.innerWidth)
+    //window.onresize = resizeML(window.innerWidth)
+    //window.addEventListener("resize", resizeML(window.innerWidth))
+</script>
 <style>
     #ml{
         display: flex;
@@ -123,5 +140,26 @@ import defaultImage from '../img/ml-slider.jpg';
     #default-carousel{
         border-radius: 1rem;
         box-shadow: 5px 5px 5px var(--color9);
+    }
+    .titulo {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    .titulo h2 {
+        font-size: 1.8vw;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 0;
+        background-color: #ffffffee;
+        border-radius: 10px;
+        padding: 5px;
+        box-shadow: 0 0 2px var(--color9);
+    }
+    @media (max-width: 800px) {
+        .titulo h2 {
+            font-size: 4vw;
+        }
     }
 </style>

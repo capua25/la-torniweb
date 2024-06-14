@@ -3,7 +3,7 @@
 ---
 
 <div class="titulo">
-    <p>Nuestras sucursales:</p>
+    <p>Nuestras sucursales</p>
 </div>
 <section id="contacto">
     <div class="column" id="cerrito">
@@ -76,7 +76,8 @@
     }
     .titulo {
         padding-top: 5%;
-        padding-bottom: 3%;
+        width: 100%;
+        margin-bottom: 3%;
     }
     .titulo p {
         font-size: 1.8vw;
@@ -121,7 +122,17 @@
         }
         iframe {
             width: 100%;
-            height: 30vh;
+            height: 36vh;
+        }
+    }
+    @media (max-width: 600px) {
+        .titulo p {
+            font-size: 4vw;
+        }
+        .column {
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 0;
         }
     }
 </style>
