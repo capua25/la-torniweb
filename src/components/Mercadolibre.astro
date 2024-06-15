@@ -1,6 +1,11 @@
 ---
 import MercadolibreCard from "./Mercadolibre-card.astro";
 import defaultImage from "../img/ml-slider.jpg";
+import imgML1 from "../img/ML_Tornillo_T1_Punta_Mecha.png";
+import imgML2 from "../img/ML_Tornillos_Para_Madera_Ph2.png";
+import imgML3 from "../img/ML_Taco_Plastico_Para_Chapa.png";
+import imgML4 from "../img/ML_Tornillo_T1_Aguja.png";
+import imgML5 from "../img/ML_Tornillo_Hex.png";
 ---
 
 <section id="ml">
@@ -16,34 +21,34 @@ import defaultImage from "../img/ml-slider.jpg";
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <MercadolibreCard
-                    img={defaultImage.src}
-                    description="Artículo"
-                    price="99"
-                    link=""
+                    img={imgML1.src}
+                    description="Tornillo T1 Punta Mecha [4.2 X 13] x 1000 Caja"
+                    price="550"
+                    link="https://articulo.mercadolibre.com.uy/MLU-676643374-tornillo-t1-punta-mecha-42-x-13-1000-caja-_JM"
                 />
                 <MercadolibreCard
-                    img={defaultImage.src}
-                    description="Artículo"
-                    price="99"
-                    link=""
+                    img={imgML2.src}
+                    description="Tornillos Para Madera Ph2 22x90(5,0x90)x200"
+                    price="540"
+                    link="https://articulo.mercadolibre.com.uy/MLU-640050023-tornillos-para-madera-ph2-22x9050x90-200-unid-tutc-_JM"
                 />
                 <MercadolibreCard
-                    img={defaultImage.src}
-                    description="Artículo"
-                    price="99"
-                    link=""
+                    img={imgML3.src}
+                    description="Taco Plastico Para Chapa Trapezoidalx100"
+                    price="510"
+                    link="https://articulo.mercadolibre.com.uy/MLU-610001643-taco-plastico-para-chapa-trapezoidal-x100-unidades-_JM"
                 />
                 <MercadolibreCard
-                    img={defaultImage.src}
-                    description="Artículo"
-                    price="99"
-                    link=""
+                    img={imgML4.src}
+                    description="Tornillo T1 Punta Aguja [4.2 X 13] x1000"
+                    price="435"
+                    link="https://articulo.mercadolibre.com.uy/MLU-676708350-tornillo-t1-punta-aguja-42-x-13-1000-caja-_JM"
                 />
                 <MercadolibreCard
-                    img={defaultImage.src}
-                    description="Artículo"
-                    price="99"
-                    link=""
+                    img={imgML5.src}
+                    description="Tornillo Hex. P/mecha [5.5 X 75] 200 Caja"
+                    price="976"
+                    link="https://articulo.mercadolibre.com.uy/MLU-676656490-tornillo-t2-punta-aguja-35-x-25-1000-caja-_JM"
                 />
                 <MercadolibreCard
                     img={defaultImage.src}
@@ -260,7 +265,8 @@ import defaultImage from "../img/ml-slider.jpg";
     }
     #items {
         min-height: 350px;
-        background-color: var(--color13);
+        background-color: var(--paleta1-2);
+        
     }
     #items > div {
         display: flex;
@@ -268,12 +274,13 @@ import defaultImage from "../img/ml-slider.jpg";
         flex-direction: row;
         justify-content: space-evenly;
         gap: 15px;
-        padding: 0 15px 0 15px;
+        padding: 0 15px 0 15px;        
     }
     #default-carousel {
         border-radius: 1rem;
         box-shadow: 5px 5px 5px var(--color9);
         min-height: 350px;
+        
     }
     .titulo {
         width: 100%;
