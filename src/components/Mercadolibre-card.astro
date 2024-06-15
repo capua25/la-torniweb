@@ -11,7 +11,7 @@ const { img, description, price, link } = Astro.props;
 
 <div class="card">
     <a href={link} target="_blank">
-        <img src={img} alt="" />
+        <img src={img} alt="" height="200" width="200" />
         <p class="description">{description}</p>
         <p class="price">${price}</p>
     </a>
@@ -22,7 +22,7 @@ const { img, description, price, link } = Astro.props;
         margin-top: 10px;
         border-radius: 1rem;
         background-color: var(--color14);
-        max-height: 320px;
+        max-height: 350px;
         width: 220px;
     }
     img{

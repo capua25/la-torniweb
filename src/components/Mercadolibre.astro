@@ -1,6 +1,5 @@
 ---
 import MercadolibreCard from "./Mercadolibre-card.astro";
-import defaultImage from "../img/ml-slider.jpg";
 import imgML1 from "../img/ML_Tornillo_T1_Punta_Mecha.png";
 import imgML2 from "../img/ML_Tornillos_Para_Madera_Ph2.png";
 import imgML3 from "../img/ML_Taco_Plastico_Para_Chapa.png";
@@ -16,7 +15,7 @@ import imgML5 from "../img/ML_Tornillo_Hex.png";
         <!-- Carousel wrapper -->
         <div
             id="items"
-            class="relative h-56 overflow-hidden rounded-2xl md:h-96"
+            class="relative h-96 overflow-hidden rounded-2xl"
         >
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -48,37 +47,7 @@ import imgML5 from "../img/ML_Tornillo_Hex.png";
                     img={imgML5.src}
                     description="Tornillo Hex. P/mecha [5.5 X 75] 200 Caja"
                     price="976"
-                    link="https://articulo.mercadolibre.com.uy/MLU-676656490-tornillo-t2-punta-aguja-35-x-25-1000-caja-_JM"
-                />
-                <MercadolibreCard
-                    img={defaultImage.src}
-                    description="Artículo"
-                    price="99"
-                    link=""
-                />
-                <MercadolibreCard
-                    img={defaultImage.src}
-                    description="Artículo"
-                    price="99"
-                    link=""
-                />
-                <MercadolibreCard
-                    img={defaultImage.src}
-                    description="Artículo"
-                    price="99"
-                    link=""
-                />
-                <MercadolibreCard
-                    img={defaultImage.src}
-                    description="Artículo"
-                    price="99"
-                    link=""
-                />
-                <MercadolibreCard
-                    img={defaultImage.src}
-                    description="Artículo"
-                    price="99"
-                    link=""
+                    link="https://articulo.mercadolibre.com.uy/MLU-675649470-tornillo-hex-pmecha-55-x-75-200-caja-_JM"
                 />
             </div>
             <!-- Item 2 
@@ -127,7 +96,7 @@ import imgML5 from "../img/ML_Tornillo_Hex.png";
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
             >
                 <svg
-                    class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                    class="w-4 h-4 text-gray-800 rtl:rotate-180"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -152,7 +121,7 @@ import imgML5 from "../img/ML_Tornillo_Hex.png";
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
             >
                 <svg
-                    class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                    class="w-4 h-4 text-gray-800 rtl:rotate-180"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -280,15 +249,16 @@ import imgML5 from "../img/ML_Tornillo_Hex.png";
         border-radius: 1rem;
         box-shadow: 5px 5px 5px var(--color9);
         min-height: 350px;
-        
+        max-width: 1600px;
     }
     .titulo {
         width: 100%;
         margin-bottom: 3%;
     }
     .titulo h2 {
-        font-size: 1.8vw;
+        font-size: 1.8rem;
         width: 50%;
+        min-width: 360px;
         text-align: center;
         margin: auto;
         margin-top: 30px;
@@ -298,9 +268,9 @@ import imgML5 from "../img/ML_Tornillo_Hex.png";
         padding: 5px;
         box-shadow: 0 0 2px var(--color9);
     }
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
         .titulo h2 {
-            font-size: 4vw;
+            font-size: 5vw;
         }
     }
 </style>
